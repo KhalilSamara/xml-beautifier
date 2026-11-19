@@ -1,0 +1,38 @@
+/* The only place the tool's identity colours are defined. */
+:root {
+  --accent: #F2646E;
+  --accent-hover: #F47A80;
+  --accent-pressed: #E0525C;
+  --accent-text: #F7868D;
+  /* Error is orange in this tool: the red accent sits 1.04:1 from suite red #FF6E67. */
+  --error: #FF9147;
+
+  --bg: #2B2B2B;
+  --topbar: #313335;
+  --surface: #3C3F41;
+  --well: #212223;
+  --text: #D6D6D6;
+  --text-2: #9AA0A0;
+  --text-2-on-surface: #A6ACAC;
+  --text-3: #7C8282;
+  --border: #4F5355;
+  --sep: #34383A;
+  --success: #6EBF6E;
+  --amber: #D7BA7D;
+  --green: #9CC28A;
+  --flag: #969C9C;
+  --gear: #8A9090;
+
+  --r-s: 4px;
+  --r-m: 6px;
+  --r-l: 10px;
+
+  --fs-1: 11px;
+  --fs-2: 12px;
+  --fs-3: 13px;
+  --fs-4: 15px;
+  --fs-5: 19px;
+
+  --sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", "Cascadia Mono", Consolas, Menlo, "DejaVu Sans Mono", monospace;
+}
