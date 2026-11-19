@@ -23,9 +23,8 @@ for (const [k, v] of Object.entries(parts)) {
 const external = html.match(/(?:src|href)\s*=\s*["'](?:https?:)?\/\/[^"']+|@import|url\(\s*["']?(?:https?:)?\/\//gi);
 if (external) throw new Error('external reference: ' + external.join(', '));
 
-// dist/ holds the file to copy onto air-gapped machines; docs/ is what GitHub Pages serves.
+// dist/ holds the file to copy onto air-gapped machines; the root index.html is what GitHub Pages serves.
 mkdirSync(join(root, 'dist'), { recursive: true });
-mkdirSync(join(root, 'docs'), { recursive: true });
 writeFileSync(join(root, 'dist', 'xml-beautifier.html'), html);
-writeFileSync(join(root, 'docs', 'index.html'), html);
-console.log('dist/xml-beautifier.html + docs/index.html', (Buffer.byteLength(html) / 1024).toFixed(1), 'KB');
+writeFileSync(join(root, 'index.html'), html);
+console.log('dist/xml-beautifier.html + index.html', (Buffer.byteLength(html) / 1024).toFixed(1), 'KB');

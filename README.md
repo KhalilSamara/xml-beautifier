@@ -17,7 +17,7 @@ Everything runs in the browser. Nothing is uploaded, and it works offline.
 ## Build
 
 ```
-node tools/build.mjs        # writes dist/xml-beautifier.html and docs/index.html
+node tools/build.mjs        # writes dist/xml-beautifier.html and index.html (Pages)
 node --test test/*.test.mjs # unit tests
 ```
 
